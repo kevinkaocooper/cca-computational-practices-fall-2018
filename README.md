@@ -103,15 +103,15 @@ function draw() {
 
     noStroke();
 
-    let red = color(220, 0, 0);
-    let blue = color(0, 120, 255);
-    let yellow = color(255, 235, 0);
+    var red = color(220, 0, 0);
+    var blue = color(0, 120, 255);
+    var yellow = color(255, 235, 0);
 
-    let leftLineX = 80;
-    let lowerLineY = 320;
-    let rightLineX = 370;
-    let upperShortLineY = 150;
-    let lowerShortLineY = 360;
+    var leftLineX = 80;
+    var lowerLineY = 320;
+    var rightLineX = 370;
+    var upperShortLineY = 150;
+    var lowerShortLineY = 360;
 
     fill(blue);
     rect(0, lowerLineY, leftLineX, height - lowerLineY);
@@ -323,8 +323,8 @@ function setup() {
 }
 
 // track the circle to draw next frame
-let x = 25;
-let y = 25;
+var x = 25;
+var y = 25;
 
 function draw() {
   colorMode(HSB);
@@ -436,7 +436,7 @@ function draw() {
   // draw shooting stars
   if (step < 2.5) {
     // fade background
-    let nextStep = step + 0.02;
+    var nextStep = step + 0.02;
     strokeWeight(3);
     stroke(0, 20, 80, 30);
     line(fromX, fromY, toX, toY);
@@ -468,3 +468,90 @@ Possible extensions:
 3. Add a second or third simultaneous shooting star.
 
 [Homework for Week 3](hw/week3.md)
+
+### Week 4: Monday, October 1, 2018
+
+#### Homework Review
+
+What did you learn from Shiffman's videos?
+1. What's the point of an object?
+2. What's an example of a range you might use for the `map` function?
+3. What line of code would give me a random year in the last century?
+
+#### Loops & Arrays
+
+Here's a cheat sheet for arrays:
+
+- `var listName = [];` -- create a new array
+- `listName[3]` -- access item at index 3 (the *fourth* item) in the array
+- `listName[3] = 7` -- set the item at index 3 to the number 7.
+- `listName.push(12)` -- add the number 12 to the end of the array
+- `listName.length` -- get the number of elements in the array
+
+Here's a cheat sheet for loops:
+
+```javascript
+for (var i = 0; i < 10; i = i + 1) {
+  print(i);
+}
+```
+
+- `var i = 0;` -- **initializer**, runs before the loop starts
+- `i < 10` -- **condition**, runs each time through the loop to check if loop should run again
+- `i = i + 1` -- **increment**, runs after the loop body to change the loop variable
+- `print(i)` -- **body**, the actual code in the loop that is run repeatedly
+
+Now, with those in mind, let's convert this code from last week to use arrays and loops:
+
+```javascript
+var xPosition = 0;
+var xDirection = 3;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  
+  ellipse(xPosition, 100, 30);
+  xPosition = xPosition + xDirection;
+
+  if (xPosition > width) {
+  	xDirection = -3;
+  }
+  if (xPosition < 0) {
+    xDirection = 3;
+  }
+}
+```
+
+Here's what we ended up with!
+
+```javascript
+var xPosition = [0, 120, 23, 33];
+var xDirection = [1, 6, -3, -7];
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  
+  for (i = 0; i < xPosition.length; i++) {
+    ellipse(xPosition[i], 100, 30);
+    xPosition[i] += xDirection[i];
+
+    if (xPosition[i] > width) {
+      xDirection[i] *= -1;
+    }
+    
+    if (xPosition[i] < 0) {
+      xDirection[i] *= -1;
+    }
+  }
+}
+```
+
+[Homework for Week 4](hw/week4.md)
