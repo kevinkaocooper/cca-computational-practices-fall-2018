@@ -17,10 +17,10 @@ We'll be doing in-class critiques on Monday.
 A copy of the API example we went over in class is included below.  It fetches
 the current windspeed for a given zip code and uses that to determine how long
 to draw a set of wavy lines.  In order to run the program you'll need to get
-your own API ID and Secret from [aerisweather.com](aerisweather.com).
+your own API ID and Secret from [aerisweather.com](http://aerisweather.com).
 
 **Assignment**: Register for an free account with
-[aerisweather.com](aerisweather.com). Update the program to have it use your
+[aerisweather.com](http://aerisweather.com). Update the program to have it use your
 own API ID and Secret so you can run it.
 
 **Optional**: Modify the program to do something based on a different component
