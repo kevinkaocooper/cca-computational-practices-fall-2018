@@ -1,12 +1,10 @@
-# Your Project Title Here
+# Morse Code Detection
 
-One-sentence summary of your project goes here; then fill out each of the following sections.
+By taping the space key, the program will translate into morse code.
 
 ## Summary
 
-A paragraph or two describing what you built for your final project.
-
-Include a discussion how it will be interactive or responsive to the environment.
+A website that allows you to learn how to type in morese code. 
 
 ## Component Parts
 
@@ -16,15 +14,15 @@ Include what types of inputs/outputs/data it will use, and a diagram showing how
 
 ## Challenges
 
-A brief discussion of what was hard, challenging, or unexpected about your project.
+Getting Started.
 
 ## Timeline
 
 What did you do in each of the past four weeks?
 
 - Week 1: Write proposal
-- Week 2: 
-- Week 3: 
+- Week 2: Coding the basic function of morse code
+- Week 3: coding the website
 - Week 4: Present!
 
 ## Completed Work
